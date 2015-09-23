@@ -14,7 +14,7 @@ var config = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: project.name + '.js'
+    filename: project.name + '.dev.js'
   },
 
   plugins: [

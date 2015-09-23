@@ -1,4 +1,5 @@
 const BasePlugin = require('../plugin')
+const noop = () => {}
 
 /**
  * Link tracking
@@ -65,11 +66,7 @@ class LinkTrackingPlugin extends BasePlugin {
   createRedirect(url) {
     let { util, options } = this.__trackomatic__
 
-    if (options.debug) {
-      return () => {}
-    }
-
-    return util.createNavigationHandler(url)
+    return options.debug ? noop : util.createNavigationHandler(url)
   }
 
 }

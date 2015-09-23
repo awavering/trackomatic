@@ -1,6 +1,6 @@
-let provide       = require('./provide')
-let shouldProvide = require('./detect')
-let Trackomatic   = require('./trackomatic')
+const provide       = require('./provide')
+const shouldProvide = require('./detect')
+const Trackomatic   = require('./trackomatic')
 
 // Only provide trackomatic to IE9+
 if (shouldProvide) {

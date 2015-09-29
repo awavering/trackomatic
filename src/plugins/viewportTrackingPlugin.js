@@ -1,17 +1,15 @@
 const BasePlugin = require('../plugin')
 
 /**
- * Viewport tracking and peporting plugin
+ * Viewport tracking and reporting plugin
  *
- * @class ViewportTrackingPlugin
- * @extends plugin as BasePlugin
+ * @extends { Plugin }
  */
 class ViewportTrackingPlugin extends BasePlugin {
 
   /**
    * The setup function for this plugin
    *
-   * @function install
    * @returns { Void }
    */
   install() {
@@ -54,7 +52,6 @@ class ViewportTrackingPlugin extends BasePlugin {
    * For all browsers listen to orientationchange events
    * and update dimensions in response
    *
-   * @function listen
    * @returns { Void }
    */
   listen() {
@@ -78,7 +75,6 @@ class ViewportTrackingPlugin extends BasePlugin {
    * Updates viewportSize and reports relative changes to GA
    * in response to window resize or orientation changes
    *
-   * @function trackViewportChanges
    * @returns { Void }
    */
   trackViewportChanges() {
@@ -110,7 +106,6 @@ class ViewportTrackingPlugin extends BasePlugin {
    * Updates viewportSize and reports relative changes to GA
    * in response to window resize or orientation changes
    *
-   * @function calculateViewportChanges
    * @param { Object }   p - The "previous" viewport size
    * @param { Obejct }   n - The "next" viewport size
    * @returns { Object }   - Relative width and height changes
